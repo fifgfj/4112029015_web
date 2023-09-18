@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			var pic = [
+				"http://1.bp.blogspot.com/-xdHGOG59LCI/UjawN7V-deI/AAAAAAAABb8/v3dHRriJkjo/s1600/EUCL%E4%B8%8A%E5%8F%B0%E9%A0%98%E7%8D%8E01.jpg",
+				"http://4.bp.blogspot.com/-UKB9Pburh8I/Ujawb7t3wGI/AAAAAAAABcE/2h3OMM1sb-0/s1600/Frocius+Android%E4%B8%8A%E5%8F%B0%E9%A0%98%E7%8D%8E01.jpg"
+			];
+			var i = 0;
+			function f1(y)
+			{
+				i += y;
+				if (i < 0) {
+					i = pic.length - 1; 
+				} else if (i >= pic.length) {
+					i = 0; 
+				}
+				document.getElementById("x").innerHTML = '<img src="' + pic[i] + '" width="100%">';
+			}
+		</script>
+	</head>
+<body>
+<div id="x">
+	<img src="http://1.bp.blogspot.com/-xdHGOG59LCI/UjawN7V-deI/AAAAAAAABb8/v3dHRriJkjo/s1600/EUCL%E4%B8%8A%E5%8F%B0%E9%A0%98%E7%8D%8E01.jpg" width="100%">
+</div>
+<a href="javascript:f1(-1);">上一張</a>
+<a href="javascript:f1(1);">下一張</a>
+</body>
+</html>
